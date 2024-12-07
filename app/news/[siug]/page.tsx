@@ -6,9 +6,7 @@ import ButtonLink from "@/app/_components/ButtonLink";
 import styles from "./page.module.css";
 
 type Props = {
-  params: {
-    slug: string;
-  };
+  params: Promise<{ slug: string }>;
   searchParams: {
     dk?: string;
   };
@@ -18,7 +16,7 @@ export async function generateMetadata({
   params,
   searchParams,
 }: Props): Promise<Metadata> {
-  const data = await getNewsDetail(params.slug, {
+  const data = await getNewsDetail((await params).slug, {
     draftKey: searchParams.dk,
   });
 
@@ -34,7 +32,7 @@ export async function generateMetadata({
 }
 
 export default async function Page({ params, searchParams }: Props) {
-  const data = await getNewsDetail(params.slug, {
+  const data = await getNewsDetail((await params).slug, {
     draftKey: searchParams.dk,
   }).catch(notFound);
 
