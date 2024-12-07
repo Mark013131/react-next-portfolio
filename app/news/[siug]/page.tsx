@@ -7,9 +7,9 @@ import styles from "./page.module.css";
 
 type Props = {
   params: Promise<{ slug: string }>;
-  searchParams: {
+  searchParams: Promise<{
     dk?: string;
-  };
+  }>;
 };
 
 export async function generateMetadata({
@@ -17,7 +17,7 @@ export async function generateMetadata({
   searchParams,
 }: Props): Promise<Metadata> {
   const data = await getNewsDetail((await params).slug, {
-    draftKey: searchParams.dk,
+    draftKey: (await searchParams).dk,
   });
 
   return {
@@ -33,7 +33,7 @@ export async function generateMetadata({
 
 export default async function Page({ params, searchParams }: Props) {
   const data = await getNewsDetail((await params).slug, {
-    draftKey: searchParams.dk,
+    draftKey: (await searchParams).dk,
   }).catch(notFound);
 
   return (
