@@ -1,5 +1,4 @@
 .bgimg {
-  background-image: url("/path-to-dot-pattern.png");
   background-size: 8px 8px;
   background-repeat: repeat;
   position: absolute;
