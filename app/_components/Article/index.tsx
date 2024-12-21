@@ -4,12 +4,14 @@ import type { News } from "@/app/_libs/microcms";
 import Date from "../Date";
 import Category from "../Category";
 import styles from "./index.module.css";
+import { log } from "console";
 
 type Props = {
   data: News;
 };
 
 export default function Article({ data }: Props) {
+  log(data.category);
   return (
     <main>
       <h1 className={styles.title}>{data.title}</h1>
