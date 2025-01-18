@@ -1,5 +1,6 @@
 .bgimg {
-  background-size: 8px 8px;
+  background-image: url("/grassland-dot1.jpg"); /* ドット背景 */
+  background-size: 8px 8px; /* 小さいタイルサイズ */
   background-repeat: repeat;
   position: absolute;
   top: 0;
@@ -11,18 +12,18 @@
 }
 
 .title {
-  font-family: "Press Start 2P", cursive;
-  text-shadow: 3px 3px 0 #000, 6px 6px 0 #555;
+  font-family: "Press Start 2P", cursive; /* ドット風フォント */
+  text-shadow: 3px 3px 0 #000, 6px 6px 0 #555; /* ドット風の立体感 */
   font-size: 3rem;
   font-weight: bold;
   text-align: center;
   margin-bottom: 1rem;
-  color: #fff;
+  color: #ffcc00; /* 明るい黄色 */
 }
 
 .description {
   font-family: "Press Start 2P", cursive;
-  color: #fff;
+  color: #ffffff;
   text-shadow: 2px 2px 0 #000;
   text-align: center;
 }
@@ -32,23 +33,23 @@
   padding: 10px 20px;
   font-family: "Press Start 2P", cursive;
   font-size: 14px;
-  color: #fff;
-  background-color: #000;
-  border: 2px solid #fff;
+  color: #ffffff;
+  background-color: #000000;
+  border: 2px solid #ffffff;
   text-decoration: none;
-  text-shadow: 1px 1px 0 #333;
+  text-shadow: 1px 1px 0 #333333;
   transition: background-color 0.3s, transform 0.2s;
 }
 
 .newsLink a:hover {
-  background-color: #555;
-  transform: scale(1.1);
+  background-color: #555555;
+  transform: scale(1.1); /* 拡大 */
 }
 
 .newsTitle {
   font-family: "Press Start 2P", cursive;
   font-size: 1.5rem;
-  color: #333;
+  color: #333333;
   text-shadow: 1px 1px 0 #000;
 }
 
@@ -57,19 +58,19 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgba(0, 0, 0, 0.8);
-  color: #fff;
+  background-color: rgba(0, 0, 0, 0.8); /* 暗めの背景でテキストを目立たせる */
+  color: #ffffff;
   overflow: hidden;
   padding: 200px 0;
 }
 
 .news {
   position: relative;
-  background-color: #fff;
+  background-color: #f0f0f0; /* 明るい背景色 */
   width: 840px;
   margin: -40px auto 0;
   padding: 24px 40px;
-  border-radius: var(--border-radius);
+  border-radius: 8px; /* 少し丸みを追加 */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
@@ -109,4 +110,50 @@
     bottom: auto;
     margin-top: 16px;
   }
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden; /* モーダルが表示されていない状態 */
+}
+
+.modal {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.modal-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.modal-button {
+  padding: 10px 20px;
+  font-family: "Press Start 2P", cursive;
+  font-size: 14px;
+  background-color: #000;
+  color: #fff;
+  border: 2px solid #fff;
+  text-decoration: none;
+  text-shadow: 1px 1px 0 #333;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.modal-button:hover {
+  background-color: #555;
+  transform: scale(1.1);
 }
