@@ -12,15 +12,15 @@ const myFont = localFont({
 export const metadata: Metadata = {
   metadataBase: new URL("http://localhost:3000"),
   title: {
-    template: "%s | シンプルなコーポレートサイト",
-    default: "シンプルなコーポレートサイト",
+    template: "%s | 青山陽希のポートフォリオサイト",
+    default: "青山陽希のポートフォリオサイト",
   },
   description:
-    "「Next.js＋ヘッドレスCMSではじめる！ かんたん・モダンWebサイト制作入門」で作成されるサイトです。",
+    "このサイトはSEを目指している学生のポートフォリオサイトになります。",
   openGraph: {
-    title: "シンプルなコーポレートサイト",
+    title: "ポートフォリオ",
     description:
-      "「Next.js＋ヘッドレスCMSではじめる！ かんたん・モダンWebサイト制作入門」で作成されるサイトです。",
+      "このサイトはSEを目指している学生のポートフォリオサイトになります。",
     images: ["/aoyama.png"],
   },
   alternates: {

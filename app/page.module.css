@@ -1,6 +1,6 @@
 .bgimg {
-  background-image: url("/grassland-dot1.jpg"); /* ドット背景 */
-  background-size: 8px 8px; /* 小さいタイルサイズ */
+  background-image: url("/grassland-dot1.jpg");
+  background-size: 8px 8px;
   background-repeat: repeat;
   position: absolute;
   top: 0;
@@ -12,7 +12,6 @@
 }
 
 .title {
-  font-family: "Press Start 2P", cursive; /* ドット風フォント */
   text-shadow: 3px 3px 0 #000, 6px 6px 0 #555; /* ドット風の立体感 */
   font-size: 3rem;
   font-weight: bold;
@@ -22,7 +21,6 @@
 }
 
 .description {
-  font-family: "Press Start 2P", cursive;
   color: #ffffff;
   text-shadow: 2px 2px 0 #000;
   text-align: center;
@@ -31,7 +29,6 @@
 .newsLink a {
   display: inline-block;
   padding: 10px 20px;
-  font-family: "Press Start 2P", cursive;
   font-size: 14px;
   color: #ffffff;
   background-color: #000000;
@@ -47,7 +44,6 @@
 }
 
 .newsTitle {
-  font-family: "Press Start 2P", cursive;
   font-size: 1.5rem;
   color: #333333;
   text-shadow: 1px 1px 0 #000;
@@ -58,7 +54,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgba(0, 0, 0, 0.8); /* 暗めの背景でテキストを目立たせる */
   color: #ffffff;
   overflow: hidden;
   padding: 200px 0;
@@ -142,7 +137,6 @@
 
 .modal-button {
   padding: 10px 20px;
-  font-family: "Press Start 2P", cursive;
   font-size: 14px;
   background-color: #000;
   color: #fff;
