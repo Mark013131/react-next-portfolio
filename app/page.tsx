@@ -31,6 +31,15 @@ export default async function Home() {
           priority
           sizes="100vw"
         />
+        <div className={styles.santaContainer}>
+          <Image
+            className={styles.santa}
+            src="/yusya.png"
+            alt="サンタキャラクター"
+            width={500}
+            height={500}
+          />
+        </div>
       </section>
       <section className={styles.news}>
         <h2 className={styles.newsTitle}>News</h2>

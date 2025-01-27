@@ -76,3 +76,87 @@
     text-align: center;
   }
 }
+.ghostContainer {
+  position: absolute;
+  bottom: 0; /* bodyの終了直前に配置 */
+  right: 3; /* 画面の一番右に配置 */
+  width: 100%;
+  height: 50px;
+  overflow: visible;
+  background-image: url("/public/yusya.png"); /* publicフォルダ内の画像を指定 */
+  background-size: 200%; /* サイズを2倍に変更 */
+  background-repeat: no-repeat; /* 画像が繰り返されないように */
+  background-position: center; /* 画像を中央に配置 */
+  background-attachment: fixed; /* 背景のスクロールを防ぐ */
+  z-index: 30;
+  left: 30%;
+}
+
+.ghostContainer img {
+  object-fit: contain; /* アスペクト比を保ちながら画像を縮小 */
+  position: absolute;
+  bottom: 0; /* bodyの終了直前に配置 */
+  right: 0; /* 画面の一番右に配置 */
+  width: auto; /* 自動で幅を調整 */
+  height: 50px; /* 高さは50pxに設定 */
+  overflow: visible;
+}
+
+.ghost {
+  position: absolute;
+  top: 0;
+  right: -100px; /* 初期位置を画面外右側 */
+  height: 50px;
+  animation: walk-left 15s linear infinite;
+}
+
+/* おばけが左右に動くアニメーション */
+@keyframes ghost-move {
+  0% {
+    right: -100px; /* スタート地点（画面外右側） */
+  }
+  100% {
+    right: 100%; /* エンド地点（画面外左側） */
+  }
+}
+.santaContainer {
+  position: absolute;
+  bottom: 0; /* bodyの終了直前に配置 */
+  right: 3; /* 画面の一番右に配置 */
+  width: 100%;
+  height: 50px;
+  overflow: visible;
+  background-image: url("/public/yusya.png"); /* publicフォルダ内の画像を指定 */
+  background-size: 200%; /* サイズを2倍に変更 */
+  background-repeat: no-repeat; /* 画像が繰り返されないように */
+  background-position: center; /* 画像を中央に配置 */
+  background-attachment: fixed; /* 背景のスクロールを防ぐ */
+}
+
+.santaContainer img {
+  object-fit: contain; /* アスペクト比を保ちながら画像を縮小 */
+  position: absolute;
+  bottom: 0; /* bodyの終了直前に配置 */
+  right: 0; /* 画面の一番右に配置 */
+  width: auto; /* 自動で幅を調整 */
+  height: 50px; /* 高さは50pxに設定 */
+  overflow: visible;
+}
+
+.santa {
+  position: absolute;
+  top: 0;
+  right: -100px; /* 初期位置を画面外右側 */
+  height: 50px;
+  animation: walk-left 15s linear infinite; /* アニメーションを15秒でゆっくり歩かせる */
+}
+
+/* サンタが右から左に歩くアニメーション */
+@keyframes walk-left {
+  0% {
+    right: -100px; /* スタート地点（画面外右側） */
+  }
+  100% {
+    right: 100%; /* エンド地点（画面外左側） */
+  }
+}

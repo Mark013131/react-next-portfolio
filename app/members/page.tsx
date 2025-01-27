@@ -7,6 +7,24 @@ export default async function Page() {
   const data = await getMembersList({ limit: MEMBERS_LIST_LIMIT });
   return (
     <div className={styles.container}>
+      <div className={styles.ghostContainer}>
+        <Image
+          className={styles.ghost}
+          src="/ghost.png"
+          alt="ゴースト"
+          width={500}
+          height={500}
+        />
+      </div>
+      <div className={styles.santaContainer}>
+        <Image
+          className={styles.santa}
+          src="/yusya.png"
+          alt="勇者"
+          width={500}
+          height={500}
+        />
+      </div>
       {data.contents.length === 0 ? (
         <p className={styles.empty}>メンバーが登録されていません。</p>
       ) : (
