@@ -6,7 +6,7 @@ import Header from "./_components/Header";
 import Footer from "./_components/Footer";
 
 const myFont = localFont({
-  src: "PixelMplus12-Regular.ttf",
+  src: "fonts/PixelMplus12-Regular.ttf",
   display: "swap",
 });
 export const metadata: Metadata = {
