@@ -41,5 +41,11 @@
     position: absolute;
     top: 24px;
     right: 16px;
+    width: 50%; /* メニューを画面の半分の幅に */
+    height: 100vh; /* 高さを画面全体に */
+    background-color: white; /* 背景色 */
+    box-shadow: -2px05pxrgba (0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    transform: translateX(100%); /* 初期状態で画面外へ */
   }
 }
