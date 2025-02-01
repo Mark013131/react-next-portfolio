@@ -14,6 +14,9 @@ export default async function Page() {
 
   return (
     <>
+      <SearchField />
+      <NewsList news={news} />
+      <Pagination totalCount={totalCount} />
       <div className={styles.kingContainer}>
         <Image
           className={styles.king}
@@ -23,9 +26,6 @@ export default async function Page() {
           height={500}
         />
       </div>
-      <SearchField />
-      <NewsList news={news} />
-      <Pagination totalCount={totalCount} />
     </>
   );
 }

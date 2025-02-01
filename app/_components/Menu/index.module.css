@@ -8,6 +8,37 @@
   display: none;
 }
 
+/* index.module.css の一部 */
+
+.confirm-button {
+  background-color: #4caf50;
+  color: white;
+  font-size: 16px;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-family: "fonts/PixelMplus12-Regular" -apple-system, BlinkMacSystemFont,
+    "Helvetica Neue", YuGothic, "ヒラギノ角ゴ ProN W3",
+    Hiragino Kaku Gothic ProN, Arial, "メイリオ", Meiryo, sans-serif;
+}
+
+.confirm-button:hover {
+  background-color: #45a049;
+}
+
+.nav.open {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--color-bg-painted);
+  color: var(--color-text-unpainted);
+  padding: 24px 16px;
+}
+
 @media (max-width: 640px) {
   .nav {
     display: none;
@@ -17,17 +48,22 @@
     display: block;
     position: fixed;
     top: 0;
-    left: 0;
     right: 0;
-    bottom: 0;
-    background-color: var(--color-bg-painted);
-    color: var(--color-text-unpainted);
-    padding: 24px 16px;
+    width: 50%; /* メニューを画面の半分に */
+    height: 100vh; /* 高さを画面全体に */
+    background-color: black box-shadow(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    transform: translateX(100%); /* 初期状態（右側に隠す） */
+  }
+
+  .nav.open.active {
+    transform: translateX(0); /* 開くとき */
   }
 
   .items {
     flex-direction: column;
     gap: 24px;
+    padding: 24px;
   }
 
   .button {
@@ -35,17 +71,14 @@
     background: none;
     border: none;
     cursor: pointer;
+    font-size: 24px;
   }
 
   .close {
     position: absolute;
-    top: 24px;
+    top: 16px;
     right: 16px;
-    width: 50%; /* メニューを画面の半分の幅に */
-    height: 100vh; /* 高さを画面全体に */
-    background-color: white; /* 背景色 */
-    box-shadow: -2px05pxrgba (0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out;
-    transform: translateX(100%); /* 初期状態で画面外へ */
+    font-size: 24px;
+    cursor: pointer;
   }
 }
